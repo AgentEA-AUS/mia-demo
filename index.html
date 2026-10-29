@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Meet Mia – AI receptionist prototype</title>
+<style>
+  :root { --ink: #1a1a1a; --muted: #4a4a4a; --bg: #f7f5f0; --card: #ffffff; --line: #ddd8cc; --accent: #0b5cad; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 40px 16px 64px; display: grid; gap: 32px; grid-template-columns: 1fr; }
+  @media (min-width: 860px) { main { grid-template-columns: 1fr 420px; align-items: start; } }
+  h1 { font-size: 2.2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.25rem; margin: 28px 0 8px; }
+  p { margin: 0 0 12px; }
+  .sub { color: var(--muted); }
+  ul { padding-left: 1.2em; margin: 0; }
+  li { margin-bottom: 10px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 8px; }
+  #mia { width: 100%; min-height: 600px; }
+  .note { font-size: 0.95rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; margin-top: 28px; }
+  strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <p class="sub">Prototype for Ray White Euroa &amp; Seymour, built by AgentEA</p>
+    <h1>Meet Mia, your AI receptionist</h1>
+    <p>Pop in your name and mobile. Mia will ring you within a few seconds. Talk to her the way a caller would.</p>
+
+    <h2>Things to try</h2>
+    <ul>
+      <li><strong>"I'd like to book an inspection in Euroa."</strong> She takes your details and puts you through to the right agent. In this demo, Jonathon's phone rings in place of your team.</li>
+      <li><strong>"I'm renting in Seymour and a pipe's burst."</strong> She treats it as urgent maintenance and gets the property manager.</li>
+      <li><strong>"Can I speak to Shane?"</strong> She takes a message, unless you tell her Shane is expecting your call.</li>
+      <li><strong>"Are you a robot?"</strong> She always tells the truth.</li>
+    </ul>
+
+    <p class="note">Mia calls from a US trial number, +1 606 755 3008. At go-live she answers your own office lines. Calls are recorded and transcribed so we can review and improve her.</p>
+  </section>
+
+  <section class="card" aria-label="Get a call from Mia">
+    <div id="mia"
+      data-retell-widget="true"
+      data-widget="callback"
+      data-public-key="RETELL_PUBLIC_KEY"
+      data-agent-id="agent_e2f1099d6f5aca7586358e9b54"
+      data-phone-number="+16067553008"
+      data-countries="AU"
+      data-title="Get a call from Mia"
+      data-color="#0b5cad"></div>
+  </section>
+</main>
+<script defer src="https://dashboard.retellai.com/retell-widget-embed.js"></script>
+</body>
+</html>
